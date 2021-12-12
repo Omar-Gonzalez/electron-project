@@ -1,6 +1,7 @@
 const path = require('path');
-const {app, BrowserWindow, ipcMain} = require('electron');
+const {app, BrowserWindow} = require('electron');
 const isDev = require('electron-is-dev');
+require('./ipcmain-events');
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -34,8 +35,3 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
-ipcMain.handle('testIpc', async (event, data) => {
-  console.log(data)
-  return data;
-})

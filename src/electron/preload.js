@@ -10,12 +10,5 @@ contextBridge.exposeInMainWorld('ipc', {
     if (validChannels.includes(channel)) {
       return await ipcRenderer.invoke(channel, data)
     }
-  },
-  receive: (channel, func) => {
-    let validChannels = [''];
-    if (validChannels.includes(channel)) {
-      // Deliberately strip event as it includes `sender`
-      ipcRenderer.on(channel, (event, ...args) => func(...args));
-    }
   }
-})
+});
