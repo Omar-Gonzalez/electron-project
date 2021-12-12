@@ -1,5 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Electron-React-Redux Template
 
+This is a modified Create React App project I configured to use with Electron, Typescript, and Fluent UI. Should work out of the box after:
+### `npm install`
+
+It already has contextBridge configured for safe use of IPC events, to run electron just:
+
+### `npm run dev`
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 ## Available Scripts
 
 In the project directory, you can run:
